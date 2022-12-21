@@ -1,0 +1,56 @@
+Story 1: Cadastro de materiais
+    - descrição
+    - tipo
+    - origem
+
+Story 2: Cadastro de pessoa [!]
+
+    - manutencionista
+    - parceiro
+    - aluno
+
+Story 3: Histórico
+    - acessar histórico do material
+    - acessar status do material
+
+Story 4: Relatórios
+    - relatórios database patrimônios (resumo geral do status dos items?)
+
+Story 5: Alterar dados
+    - alteração de dados do patrimônio quando necessário
+
+Story 6: Associação de materiais
+    - associar materiais ao usuário solicitante
+
+Story 7: Listagem de materiais para manutenção
+    - admin deve enviar lista de materiais para manutencionista 
+
+Story 8: Solicitação para empréstimo 
+    - usuário preenche formulário para solicitar material
+
+Story 9: Manutencionista recebe lista de manutenção
+    - ver story 7
+
+Story 10: Manutencionista atualiza o status do material 
+    - manutencionista atualiza o status com notas
+
+Story 11: Admin acessa o status do material
+    - admin pode acessar a lista editada pelo manutencionista
+
+Story 12: Administrador tem controle sobre usuários
+    - admin pode modificar usuários e parceiros livremente
+
+Story 13: Manutencionista pode enviar mensagem sempre que encontra não conformidade
+    
+Story 14: Admin vizualiza e responde mensagens dos manutencionistas 
+    - admin pode se comunicar diretamente com manutencionistas
+
+
+
+Status id: 123 MANU-PEÇA: PRECISA DE CPU  [+]
+
+Sobre:
+Status 123
+mensagem:
+blablabla compra cpu
+

@@ -1,0 +1,108 @@
+01/12
+Tabela Materiais: 
+    id_int_material ID SERIAL
+    nome_txt_material
+    desc_txt_material
+    id_int_categoria FK
+    Origem
+        {
+            [Aquisição, Doação, Aluguel],
+            Data de origem?,
+            Data de devolução (anulável),
+            Pessoa de origem
+        }
+  
+Embedded Origem 
+    OrigemENUM
+    id_int_pessoa
+    dataEnt_dt_origem 
+    dataDevol_dt_origem
+
+Tabela StatusMaterial
+
+    id_int_status
+    id_int_material  
+    id_int_responsavel
+    data_dt_status
+    StatusENUM[?]
+    obs_txt_status
+
+ENUM StatusENUM
+
+    
+
+Tabela Pessoa Física
+    id_int_pessoaF
+    nome_txt_pessoaF
+    email_txt_pessoaF
+    senha_txt_pessoaF
+    Endereço
+    cpf_txt_pessoaF
+    tel_txt_pessoaF
+    foto(? futuro)
+    
+Tabela Pessoa Jurídica
+    nome_txt_resp   
+    cpf_txt_resp
+    cargo_txt_resp
+
+    email_txt_pessoaJ
+    senha_txt_pessoaJ
+    id_int_pessoaJ
+    nomeFan_txt_pessoaJ
+    razaoSocial_txt_pessoaJ
+    Endereco
+    cnpj_txt_pessoaJ
+    tel_txt_pessoaJ
+    foto(also futuro)
+
+
+Embedded Endereço
+    rua_txt_pessoa
+    bairro_txt_pessoa
+    cidade_txt_pessoa
+    casa_txt_pessoa 
+    compl_txt_pessoa
+    uf_txt_pessoa
+
+Tabela Histórico: 
+    Inclui todos os status passados
+        - Foi emprestado? Pra quem?
+        - Está em manutenção? Com quem? Qual o status da manutenção.
+        - Qual a data das mudanças? 
+        
+Tabela Manutenção [Ver tabela de cima ^]
+    Status de manutenção
+    Manutencionista
+    Observação
+
+
+A FAZER: 
+    - StatusENUM: Quais são as opções? Quais os campos?
+    - Métodos e controllers para Categoria, Pessoa.
+    - Terminar métodos para Material
+   
+
+Tabela Historico
+data_status - STATUS atual é definido pela data mais recente
+id_status
+id_material
+id_pessoa (f ou j)
+StatusENUM
+obs_txt_status Observacoes
+
+
+
+
+CASE 
+    WHEN INDICADOR = 1, THEN FROM pF
+    WHEN INDICADOR = 2, THEN FROM pJ
+END;
+
+
+
+
+
+
+
+
