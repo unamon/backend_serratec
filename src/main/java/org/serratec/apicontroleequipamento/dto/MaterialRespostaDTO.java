@@ -1,6 +1,7 @@
 package org.serratec.apicontroleequipamento.dto;
 
 import org.serratec.apicontroleequipamento.model.Categoria;
+import org.serratec.apicontroleequipamento.model.Material;
 import org.serratec.apicontroleequipamento.model.Origem;
 
 public class MaterialRespostaDTO {
@@ -14,7 +15,17 @@ public class MaterialRespostaDTO {
 	public MaterialRespostaDTO() {
 		super();
 	}
-
+	
+	public MaterialRespostaDTO(Material material, String uri) {
+		super();
+		this.setDescricao(material.getDescricao());
+		this.setId(material.getId());
+		this.setNome(material.getNome());
+		this.setCategoria(material.getCategoria());
+		this.setOrigem(material.getOrigem());
+		this.setUrlNotaFiscal(uri);
+	}
+	
 	public MaterialRespostaDTO(Long id, String nome, Categoria categoria, Origem origem, String urlNotaFiscal,
 			String descricao) {
 		super();

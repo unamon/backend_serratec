@@ -139,13 +139,7 @@ public class MaterialService {
 				.path("/materiais/{id}/notaFiscal")
 				.buildAndExpand(material.getId())
 				.toUri();
-		MaterialRespostaDTO dto = new MaterialRespostaDTO();
-		dto.setDescricao(material.getDescricao());
-		dto.setId(material.getId());
-		dto.setNome(material.getNome());
-		dto.setCategoria(material.getCategoria());
-		dto.setOrigem(material.getOrigem());
-		dto.setUrlNotaFiscal(uri.toString());
+		MaterialRespostaDTO dto = new MaterialRespostaDTO(material, uri.toString());
 		return dto;
 	}
 }
